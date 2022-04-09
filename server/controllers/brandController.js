@@ -2,6 +2,7 @@ class BrandController {
   async getAll(req, res) {
 
   }
+
   async create(req, res) {
 
   }
