@@ -1,14 +1,32 @@
 const uuid = require('uuid')
-const patch = require('path')
+const path = require('path')
 const { Device } = require('../models/models')
 const ApiError = require('../error/ApiError')
 
 class DeviceController {
   async getAll(req, res) {
-
+    let { typeId, brandId, limit, page } = req.query
+    page = page || 1
+    limit = limit || 10
+    let offset = page * limit - limit
+    let devices
+    if (!typeId && !brandId) {
+      devices = await Device.findAndCountAll({ limit, offset })
+    }
+    if (!typeId && brandId) {
+      devices = await Device.findAndCountAll({ where: { brandId }, limit, offset })
+    }
+    if (typeId && !brandId) {
+      devices = await Device.findAndCountAll({ where: { typeId }, limit, offset })
+    }
+    if (typeId && brandId) {
+      devices = await Device.findAndCountAll({ where: { typeId, brandId }, limit, offset })
+    }
+    return res.json(devices)
   }
 
   async getOne(req, res) {
+    const device = await Device.findById(id)
 
   }
 
@@ -29,7 +47,7 @@ class DeviceController {
 
       return res.json(device)
     } catch (e) {
-      next(ApiError.badRequest('Error: ', e.message))
+      next(ApiError.badRequest(e.message))
     }
   }
 }
