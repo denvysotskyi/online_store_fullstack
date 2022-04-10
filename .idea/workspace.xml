@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="045e7402-3c38-4bf9-8299-9ccb44cb4c35" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/.env" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/brandController.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/deviceController.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/typeController.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/userController.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/db.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/error/ApiError.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/middleware/AuthMiddleware.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/middleware/CheckRoleMiddleware.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/middleware/ErrorHandlingMiddleware.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/models.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/online_store_diagram.drawio" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/brandRouter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/deviceRouter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/typeRouter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/userRouter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/static/0144f3d0-5d99-43aa-8877-55ee1c6662c9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/static/0b1f0a64-e0f1-4378-a317-bd6ec92732d3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/static/579fa301-2464-44f3-a0fd-18b666373091.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/static/c4da2d11-90ed-4bf1-b281-153986e82073.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/yarn.lock" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="27bkeGmiZafEEAHitQUZsIqmkUY" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="online_store_server" type="NodeJSConfigurationType" path-to-js-file="index.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="045e7402-3c38-4bf9-8299-9ccb44cb4c35" name="Changes" comment="" />
+      <created>1649596271171</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1649596271171</updated>
+      <workItem from="1649596273456" duration="4000" />
+      <workItem from="1649596358355" duration="170000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
