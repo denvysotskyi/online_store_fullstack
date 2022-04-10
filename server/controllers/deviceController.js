@@ -10,6 +10,7 @@ class DeviceController {
     limit = limit || 10
     let offset = page * limit - limit
     let devices
+
     if (!typeId && !brandId) {
       devices = await Device.findAndCountAll({ limit, offset })
     }
@@ -28,7 +29,7 @@ class DeviceController {
   async getOne(req, res) {
     const { id } = req.params
     const device = await Device.findOne({
-      where: {id},
+      where: { id },
       include: [{ model: DeviceInfo, as: 'info' }]
     })
     return res.json(device)
@@ -39,6 +40,7 @@ class DeviceController {
       let { name, price, typeId, brandId, info } = req.body
       const { image } = req.files
       let fileName = uuid.v4() + '.jpg'
+
       image.mv(path.resolve(__dirname, '..', 'static', fileName))
       const device = await Device.create({
         name, price, typeId,
@@ -53,7 +55,6 @@ class DeviceController {
           deviceId: device.id
         }))
       }
-
       return res.json(device)
     } catch (e) {
       next(ApiError.badRequest(e.message))

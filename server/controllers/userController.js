@@ -11,20 +11,19 @@ const generateJwt = (id, email, role) => {
 
 class UserController {
   async check(req, res, next) {
-    const {id} = req.query
-    if (!id) {
-      return next(ApiError.badRequest('Not set ID'))
-    }
-    res.json(id)
+    const token = generateJwt(req.user.id, req.user,email, req.user.role)
+    return res.json({ token })
   }
 
   async registration(req, res, next) {
     const { email, password, role } = req.body
+
     if (!email || !password) {
       return next(ApiError.badRequest('Not set email or password'))
     }
 
     const candidate = await User.findOne({ where: { email }})
+
     if (candidate) {
       return next(ApiError.badRequest('User with this email already exists'))
     }
@@ -37,8 +36,22 @@ class UserController {
     return res.json({ token })
   }
 
-  async login(req, res) {
+  async login(req, res, next) {
+    const { email, password } = req.body
+    const user = await User.findOne({ where: { email }})
 
+    if (!user) {
+      return next(ApiError.internal('Not set user'))
+    }
+
+    let comparePassword = bcrypt.compareSync(password, user.password)
+
+    if (!comparePassword) {
+      return next(ApiError.internal('Password is incorrect'))
+    }
+
+    const token = generateJwt(user.id, user.email, user.role)
+    return res.json({ token })
   }
 }
 
