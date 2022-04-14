@@ -11,7 +11,7 @@ const generateJwt = (id, email, role) => {
 
 class UserController {
   async check(req, res, next) {
-    const token = generateJwt(req.user.id, req.user,email, req.user.role)
+    const token = generateJwt(req.user.id, req.user.email, req.user.role)
     return res.json({ token })
   }
 
@@ -19,13 +19,13 @@ class UserController {
     const { email, password, role } = req.body
 
     if (!email || !password) {
-      return next(ApiError.badRequest('Not set email or password'))
+      return next(ApiError.badRequest('Не задан email или пароль'))
     }
 
     const candidate = await User.findOne({ where: { email }})
 
     if (candidate) {
-      return next(ApiError.badRequest('User with this email already exists'))
+      return next(ApiError.badRequest('Пользователь с данным email уже существует'))
     }
 
     const hashPassword = await bcrypt.hash(password, 5)
@@ -41,13 +41,13 @@ class UserController {
     const user = await User.findOne({ where: { email }})
 
     if (!user) {
-      return next(ApiError.internal('Not set user'))
+      return next(ApiError.internal('Не задан пользователь'))
     }
 
     let comparePassword = bcrypt.compareSync(password, user.password)
 
     if (!comparePassword) {
-      return next(ApiError.internal('Password is incorrect'))
+      return next(ApiError.internal('Неверный пароль'))
     }
 
     const token = generateJwt(user.id, user.email, user.role)
